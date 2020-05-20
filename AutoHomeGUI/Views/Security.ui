@@ -2,39 +2,98 @@
 <ui version="4.0">
  <class>Form</class>
  <widget class="QWidget" name="Form">
+  <property name="windowModality">
+   <enum>Qt::WindowModal</enum>
+  </property>
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>740</width>
-    <height>502</height>
+    <width>749</width>
+    <height>391</height>
    </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>749</width>
+    <height>391</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>749</width>
+    <height>391</height>
+   </size>
+  </property>
+  <property name="sizeIncrement">
+   <size>
+    <width>1</width>
+    <height>1</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <stylestrategy>PreferAntialias</stylestrategy>
+   </font>
   </property>
   <property name="cursor">
    <cursorShape>ArrowCursor</cursorShape>
+  </property>
+  <property name="mouseTracking">
+   <bool>true</bool>
+  </property>
+  <property name="tabletTracking">
+   <bool>false</bool>
+  </property>
+  <property name="contextMenuPolicy">
+   <enum>Qt::NoContextMenu</enum>
+  </property>
+  <property name="acceptDrops">
+   <bool>true</bool>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
   <property name="autoFillBackground">
-   <bool>false</bool>
+   <bool>true</bool>
   </property>
-  <widget class="QFrame" name="frame">
+  <widget class="QFrame" name="Security_Frame">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>741</width>
-     <height>251</height>
+     <width>749</width>
+     <height>391</height>
     </rect>
    </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="autoFillBackground">
+    <bool>true</bool>
+   </property>
    <property name="frameShape">
-    <enum>QFrame::StyledPanel</enum>
+    <enum>QFrame::NoFrame</enum>
    </property>
    <property name="frameShadow">
-    <enum>QFrame::Raised</enum>
+    <enum>QFrame::Plain</enum>
    </property>
-   <widget class="QPushButton" name="pushButton">
+   <property name="lineWidth">
+    <number>0</number>
+   </property>
+   <widget class="QPushButton" name="back_button">
     <property name="geometry">
      <rect>
       <x>0</x>
@@ -45,20 +104,20 @@
     </property>
     <property name="font">
      <font>
-      <pointsize>16</pointsize>
+      <pointsize>32</pointsize>
       <weight>75</weight>
       <bold>true</bold>
      </font>
     </property>
     <property name="text">
-     <string>Back</string>
+     <string>🔙</string>
     </property>
    </widget>
-   <widget class="QLCDNumber" name="lcdNumber_2">
+   <widget class="QLCDNumber" name="minutes_label">
     <property name="geometry">
      <rect>
       <x>660</x>
-      <y>0</y>
+      <y>10</y>
       <width>41</width>
       <height>41</height>
      </rect>
@@ -79,14 +138,17 @@
      <number>88</number>
     </property>
    </widget>
-   <widget class="QLCDNumber" name="lcdNumber_3">
+   <widget class="QLCDNumber" name="hour_label">
     <property name="geometry">
      <rect>
       <x>610</x>
-      <y>0</y>
+      <y>10</y>
       <width>41</width>
       <height>41</height>
      </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
     </property>
     <property name="inputMethodHints">
      <set>Qt::ImhTime</set>
@@ -104,12 +166,12 @@
      <number>88</number>
     </property>
    </widget>
-   <widget class="QLabel" name="label_4">
+   <widget class="QLabel" name="security_title_label">
     <property name="geometry">
      <rect>
-      <x>160</x>
-      <y>100</y>
-      <width>421</width>
+      <x>250</x>
+      <y>50</y>
+      <width>241</width>
       <height>101</height>
      </rect>
     </property>
@@ -124,11 +186,11 @@
      <string>Security</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_5">
+   <widget class="QLabel" name="time_separator_label">
     <property name="geometry">
      <rect>
       <x>650</x>
-      <y>10</y>
+      <y>20</y>
       <width>21</width>
       <height>21</height>
      </rect>
@@ -142,25 +204,25 @@
      <string>:</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_6">
+   <widget class="QLabel" name="am_pm_label">
     <property name="geometry">
      <rect>
-      <x>710</x>
-      <y>20</y>
-      <width>21</width>
-      <height>16</height>
+      <x>700</x>
+      <y>30</y>
+      <width>31</width>
+      <height>21</height>
      </rect>
     </property>
     <property name="text">
      <string>AM</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_7">
+   <widget class="QLabel" name="date_label">
     <property name="geometry">
      <rect>
-      <x>600</x>
+      <x>630</x>
       <y>40</y>
-      <width>141</width>
+      <width>91</width>
       <height>31</height>
      </rect>
     </property>
@@ -179,296 +241,262 @@
      <set>Qt::TextEditable</set>
     </property>
    </widget>
-  </widget>
-  <widget class="QFrame" name="frame_2">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>260</y>
-     <width>741</width>
-     <height>241</height>
-    </rect>
-   </property>
-   <property name="frameShape">
-    <enum>QFrame::StyledPanel</enum>
-   </property>
-   <property name="frameShadow">
-    <enum>QFrame::Raised</enum>
-   </property>
-   <widget class="QWidget" name="widget" native="true">
+   <widget class="QWidget" name="verticalLayoutWidget_2">
     <property name="geometry">
      <rect>
-      <x>380</x>
-      <y>70</y>
-      <width>191</width>
-      <height>131</height>
-     </rect>
-    </property>
-    <widget class="QLabel" name="label_3">
-     <property name="geometry">
-      <rect>
-       <x>30</x>
-       <y>0</y>
-       <width>141</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>18</pointsize>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="text">
-      <string>Access Control</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButton_3">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>70</y>
-       <width>151</width>
-       <height>32</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">Fill-color rgb(56, 184, 50)</string>
-     </property>
-     <property name="text">
-      <string>Lock</string>
-     </property>
-     <property name="autoDefault">
-      <bool>false</bool>
-     </property>
-     <property name="default">
-      <bool>false</bool>
-     </property>
-     <property name="flat">
-      <bool>false</bool>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButton_4">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>100</y>
-       <width>151</width>
-       <height>32</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">Fill-Color rgb(252, 53, 53)</string>
-     </property>
-     <property name="text">
-      <string>Unlock</string>
-     </property>
-    </widget>
-    <widget class="QComboBox" name="comboBox_3">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>40</y>
-       <width>151</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>10</pointsize>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-     <item>
-      <property name="text">
-       <string>White</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Yellow</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Green</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Blue</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Light Blue</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Red</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Pink</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Purple</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Magenta</string>
-      </property>
-     </item>
-    </widget>
-   </widget>
-   <widget class="QWidget" name="widget_2" native="true">
-    <property name="geometry">
-     <rect>
-      <x>160</x>
-      <y>70</y>
-      <width>161</width>
+      <x>120</x>
+      <y>220</y>
+      <width>171</width>
       <height>151</height>
      </rect>
     </property>
-    <widget class="QLabel" name="label">
-     <property name="geometry">
-      <rect>
-       <x>30</x>
-       <y>0</y>
-       <width>101</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>18</pointsize>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="text">
-      <string>Video Feed</string>
-     </property>
-    </widget>
-    <widget class="QComboBox" name="comboBox_2">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>120</y>
-       <width>141</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>10</pointsize>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-     <item>
-      <property name="text">
-       <string>White</string>
-      </property>
+    <layout class="QVBoxLayout" name="verticalLayout_3">
+     <item alignment="Qt::AlignHCenter">
+      <widget class="QLabel" name="video_feed_widget_lable">
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Video Feed</string>
+       </property>
+      </widget>
      </item>
      <item>
-      <property name="text">
-       <string>Yellow</string>
-      </property>
+      <widget class="QPushButton" name="play_video_label">
+       <property name="text">
+        <string>Play Feed</string>
+       </property>
+      </widget>
      </item>
      <item>
-      <property name="text">
-       <string>Green</string>
-      </property>
+      <widget class="QComboBox" name="video_room_selector">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="contextMenuPolicy">
+        <enum>Qt::NoContextMenu</enum>
+       </property>
+       <property name="acceptDrops">
+        <bool>true</bool>
+       </property>
+       <property name="currentText">
+        <string>Master</string>
+       </property>
+       <property name="frame">
+        <bool>true</bool>
+       </property>
+       <item>
+        <property name="text">
+         <string>Master</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Bedroom1</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Bedroom2</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Living</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Family</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Guest</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Kitchen</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Dining</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Game</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Bathroom 1</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Bathroom 2</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Basement</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Library</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Gym</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Storage</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Garage</string>
+        </property>
+       </item>
+      </widget>
      </item>
-     <item>
-      <property name="text">
-       <string>Blue</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Light Blue</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Red</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Pink</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Purple</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Magenta</string>
-      </property>
-     </item>
-    </widget>
-    <widget class="QPushButton" name="pushButton_2">
-     <property name="geometry">
-      <rect>
-       <x>12</x>
-       <y>41</y>
-       <width>141</width>
-       <height>81</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>PushButton</string>
-     </property>
-    </widget>
+    </layout>
    </widget>
-   <widget class="QWidget" name="widget_3" native="true">
+   <widget class="QWidget" name="horizontalLayoutWidget_3">
     <property name="geometry">
      <rect>
-      <x>180</x>
-      <y>0</y>
-      <width>351</width>
-      <height>80</height>
+      <x>120</x>
+      <y>110</y>
+      <width>491</width>
+      <height>107</height>
      </rect>
     </property>
-    <widget class="QPushButton" name="pushButton_5">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>10</y>
-       <width>151</width>
-       <height>61</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Arm Away</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButton_6">
-     <property name="geometry">
-      <rect>
-       <x>200</x>
-       <y>10</y>
-       <width>151</width>
-       <height>61</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Arm Stay</string>
-     </property>
-    </widget>
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <item>
+      <widget class="QPushButton" name="arm_away_button">
+       <property name="text">
+        <string>Arm/Away</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="arm_stay_button">
+       <property name="text">
+        <string>Arm/Stay</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </widget>
+   <widget class="QWidget" name="verticalLayoutWidget_3">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>220</y>
+      <width>171</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_4">
+     <item alignment="Qt::AlignHCenter">
+      <widget class="QLabel" name="entry_control_widget_label">
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Entry Control</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QDialogButtonBox" name="door_lock_button_box">
+       <property name="standardButtons">
+        <set>QDialogButtonBox::Close|QDialogButtonBox::Open</set>
+       </property>
+       <property name="centerButtons">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="entry_selector">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="contextMenuPolicy">
+        <enum>Qt::NoContextMenu</enum>
+       </property>
+       <property name="acceptDrops">
+        <bool>true</bool>
+       </property>
+       <property name="currentText">
+        <string>Whole House</string>
+       </property>
+       <property name="frame">
+        <bool>true</bool>
+       </property>
+       <item>
+        <property name="text">
+         <string>Whole House</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Main Entrance Door</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Kitchen Door</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Master Bedroom Door</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Garage Door</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <zorder>back_button</zorder>
+   <zorder>minutes_label</zorder>
+   <zorder>hour_label</zorder>
+   <zorder>security_title_label</zorder>
+   <zorder>time_separator_label</zorder>
+   <zorder>date_label</zorder>
+   <zorder>am_pm_label</zorder>
+   <zorder>verticalLayoutWidget_2</zorder>
+   <zorder>horizontalLayoutWidget_3</zorder>
+   <zorder>verticalLayoutWidget_3</zorder>
   </widget>
  </widget>
  <resources/>
