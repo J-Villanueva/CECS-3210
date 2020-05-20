@@ -88,7 +88,10 @@
     <bool>true</bool>
    </property>
    <property name="autoFillBackground">
-    <bool>true</bool>
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(16, 128, 128);</string>
    </property>
    <property name="frameShape">
     <enum>QFrame::NoFrame</enum>
@@ -116,6 +119,9 @@
          <pointsize>18</pointsize>
         </font>
        </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgba(255, 255, 255, 0);</string>
+       </property>
        <property name="text">
         <string>Weekday</string>
        </property>
@@ -127,6 +133,9 @@
         <font>
          <pointsize>18</pointsize>
         </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgba(255, 255, 255, 0);</string>
        </property>
        <property name="text">
         <string>Month</string>
@@ -140,6 +149,9 @@
          <pointsize>18</pointsize>
         </font>
        </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgba(255, 255, 255, 0);</string>
+       </property>
        <property name="text">
         <string>Day</string>
        </property>
@@ -152,6 +164,9 @@
          <pointsize>18</pointsize>
         </font>
        </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgba(255, 255, 255, 0);</string>
+       </property>
        <property name="text">
         <string>,</string>
        </property>
@@ -163,6 +178,9 @@
         <font>
          <pointsize>18</pointsize>
         </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgba(255, 255, 255, 0);</string>
        </property>
        <property name="text">
         <string>Year</string>
@@ -186,6 +204,9 @@
       <weight>75</weight>
       <bold>true</bold>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(255, 255, 255, 0);</string>
     </property>
     <property name="text">
      <string>:</string>
@@ -218,6 +239,9 @@
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
       <widget class="QLCDNumber" name="hour_label">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgba(255, 255, 255, 0);</string>
+       </property>
        <property name="inputMethodHints">
         <set>Qt::ImhTime</set>
        </property>
@@ -237,6 +261,9 @@
      </item>
      <item>
       <widget class="QLCDNumber" name="minutes_label">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgba(255, 255, 255, 0);</string>
+       </property>
        <property name="inputMethodHints">
         <set>Qt::ImhTime</set>
        </property>
@@ -270,6 +297,9 @@
       <pointsize>20</pointsize>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(255, 255, 255, 0);</string>
+    </property>
     <property name="text">
      <string>AM</string>
     </property>
@@ -297,9 +327,9 @@
    <widget class="QWidget" name="gridLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>290</x>
+      <x>248</x>
       <y>220</y>
-      <width>183</width>
+      <width>241</width>
       <height>161</height>
      </rect>
     </property>
@@ -389,6 +419,12 @@
      </item>
     </layout>
    </widget>
+   <zorder>horizontalLayoutWidget_2</zorder>
+   <zorder>horizontalLayoutWidget</zorder>
+   <zorder>am_pm_label</zorder>
+   <zorder>homescreen_temperature_label</zorder>
+   <zorder>gridLayoutWidget</zorder>
+   <zorder>time_separator</zorder>
   </widget>
  </widget>
  <resources/>
